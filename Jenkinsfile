@@ -14,7 +14,7 @@ pipeline {
             }
              stage('Test') {
                      steps {
-                             sh ''
+                             js './src/__tests__/App.test.js'
                      }
              }
          }
