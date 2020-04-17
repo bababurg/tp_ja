@@ -26,7 +26,19 @@ pipeline {
                      }
              }
 
-             
+             stage('Install ansible') {
+                     steps {
+                             script {
+                                     sh 'apk add ansible'
+                             }
+
+                             script {
+                                     sh 'apk add python3'
+                             }
+                     }
+                        
+             }
+
              stage('Launch Ansible') {
                      steps {
                              ansiblePlaybook (
