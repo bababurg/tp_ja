@@ -12,7 +12,7 @@ pipeline {
                     sh 'npm install'
                 }
             }
-             stage('Test') {
+            stage('Test') {
                      steps {
                              js './src/__tests__/App.test.js'
                      }
