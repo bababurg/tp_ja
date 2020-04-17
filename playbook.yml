@@ -1,0 +1,19 @@
+- name: TP_js
+  hosts: 192.168.0.31
+  remote_user: root
+
+  tasks:
+  
+    - name: NodeJS install
+      apt:
+        name: nodejs
+        state: present
+
+    - name: npm install
+      apt:
+        name: npm
+        state: present
+
+    - name: Update npm
+      shell:
+        cmd: npm update
