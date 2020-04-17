@@ -2,8 +2,24 @@
   hosts: 192.168.0.31
   remote_user: root
 
-  tasks:
   
+  tasks:
+
+    - name: Git install
+      apt:
+        name: git
+        state: present
+    
+    - name: Create repository project
+      file:
+        path: /home/tp-js
+        state: directory
+
+    - name: Pull app
+      git:
+        repo: https://github.com/web-slate/simple-react-app-with-unit-testing
+        dest: /home/tp-js
+    
     - name: NodeJS install
       apt:
         name: nodejs
