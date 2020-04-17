@@ -25,8 +25,14 @@ pipeline {
                              sh 'npm test'
                      }
              }
+
+             stage('Install Ansible') {
+                     steps {
+                             sh 'apt-get install ansible'
+                     }
+             }
              
-             stage('Ansible') {
+             stage('Launch Ansible') {
                      steps {
                              ansiblePlaybook (
                                      colorized: true,
