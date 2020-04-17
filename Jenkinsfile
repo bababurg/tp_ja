@@ -29,9 +29,9 @@ pipeline {
              stage('Ansible') {
                      steps {
                              ansiblePlaybook (
-                                     playbook: 'playbook.yml'
                                      colorized: true,
                                      become: true,
+                                     playbook: 'playbook.yml'
                                      
                              )
                         }
