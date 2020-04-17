@@ -6,9 +6,8 @@ pipeline {
                 }
         }
         environment {
-                CI='true'
+            CI = 'true'
         }
-
         stages {
             stage('Build') {
                 steps {
@@ -16,10 +15,9 @@ pipeline {
                 }
             }
             stage('Test') {
-                     steps {
-                             sh './src/__tests__/App.test.js'
-                     }
-             }
-         }
-     
+                steps {
+                    sh './src/__tests__/App.test.js'
+                }
+            }
+        }
 }
