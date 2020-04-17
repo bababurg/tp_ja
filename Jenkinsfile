@@ -26,11 +26,6 @@ pipeline {
                      }
              }
 
-             stage('Install Ansible') {
-                     steps {
-                             sh 'apt-get install ansible'
-                     }
-             }
              
              stage('Launch Ansible') {
                      steps {
